@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+    fx:controller="echec.frontal.vues.VueFileAttente"
+	styleClass="conteneur"
+	id="vue-file-attente">
+	<Label id="text"
+	text="Le timer, les pièces perdus et les coordonnés des coups des deux joueurs">
+	</Label>
+    <ImageView>
+         <image>
+             <Image url="@logo.png" />
+         </image>
+    </ImageView>
+
+    <Button 
+		text="%retournerMenu"
+    	styleClass="gros-bouton"
+		id="bouton-ouvrir-partie">
+	</Button>
+	
+</VBox>
