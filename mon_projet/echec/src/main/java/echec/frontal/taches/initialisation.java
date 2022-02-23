@@ -10,11 +10,17 @@ import echec.frontal.vues.VueFileAttente;
 public class initialisation {
 
 	public static void creerTaches(FrontendTasks tasks) {
-		afficherFenetre(tasks);
-        creerVueRacine(tasks);
-        creerVueFileAttente(tasks);
-        installerVueRacine(tasks);
-        installerVueFileAttente(tasks);
+		tasks.taskGroup("Initialisation")
+			.contains(subTasks -> {
+				afficherFenetre(subTasks);
+				
+				creerVueRacine(subTasks);
+				creerVueFileAttente(subTasks);
+				
+				installerVueRacine(subTasks);
+				installerVueFileAttente(subTasks);	
+			});
+		
 	}
 	
 	private static void afficherFenetre(FrontendTasks tasks) {

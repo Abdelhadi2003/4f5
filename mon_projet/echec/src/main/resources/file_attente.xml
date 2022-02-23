@@ -20,9 +20,10 @@
     </ImageView>
 
     <Button 
+		fx:id="boutonOuvrirDetailPartie"
 		text="%retournerMenu"
     	styleClass="gros-bouton"
-		id="bouton-ouvrir-partie">
+		id="bouton-ouvrir-detailPartie">
 	</Button>
 	
 </VBox>

@@ -11,6 +11,10 @@
 	-fx-alignment:center;
 }
 
+#vue-partie {
+	-fx-alignment:center;
+}
+
 .gros-bouton {
 	-fx-font-size: 1.2em;
 	-fx-background-color: 
@@ -31,3 +35,5 @@
 .gros-bouton:hover {
 	-fx-cursor: hand;
 }
+
+

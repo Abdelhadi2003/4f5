@@ -10,6 +10,10 @@
 	-fx-alignment:bottom-right;
 }
 
+#vue-partie {
+	-fx-alignment:center;
+}
+
 .gros-bouton {
 	-fx-font-size: 1.2em;
 	-fx-background-color: 
