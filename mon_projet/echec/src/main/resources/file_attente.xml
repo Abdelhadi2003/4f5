@@ -11,7 +11,7 @@
 	styleClass="conteneur"
 	id="vue-file-attente">
 	<Label id="text"
-	text="Le timer, les pièces perdus et les coordonnés des coups des deux joueurs">
+	text="%detailPartie">
 	</Label>
     <ImageView>
          <image>

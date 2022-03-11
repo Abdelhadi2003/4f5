@@ -25,7 +25,7 @@ public class VueDetailPartie extends ViewFx{
 	private void installerEvtAfficherFileAttente() {
 		EvtAfficherFileAttente evtNtro = NtroApp.newEvent(EvtAfficherFileAttente.class);
 		boutonQuitterDetailPartie.setOnAction(evtFx -> {
-			System.out.println("[VuePartie] clic: " + evtFx.getEventType());
+			System.out.println("[VueDetailPartie] clic: " + evtFx.getEventType());
 			evtNtro.trigger();
 		});
 	}
