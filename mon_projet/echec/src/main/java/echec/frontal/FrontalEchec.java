@@ -5,11 +5,11 @@ import ca.ntro.app.frontend.ViewRegistrarFx;
 import ca.ntro.app.frontend.events.EventRegistrar;
 import ca.ntro.app.tasks.frontend.FrontendTasks;
 import echec.frontal.evenements.EvtAfficherFileAttente;
-import echec.frontal.evenements.EvtAfficherPartie;
+import echec.frontal.evenements.EvtAfficherDetailPartie;
 import echec.frontal.taches.Navigation;
 import echec.frontal.taches.initialisation;
 import echec.frontal.vues.VueFileAttente;
-import echec.frontal.vues.VuePartie;
+import echec.frontal.vues.VueDetailPartie;
 import echec.frontal.vues.VueRacine;
 import ca.ntro.app.services.Window;
 import static ca.ntro.app.tasks.frontend.FrontendTasks.*;
@@ -35,7 +35,7 @@ public class FrontalEchec implements FrontendFx{
 	public void registerEvents(EventRegistrar registrar) {
 		// TODO Auto-generated method stub
 		registrar.registerEvent(EvtAfficherFileAttente.class);
-		registrar.registerEvent(EvtAfficherPartie.class);
+		registrar.registerEvent(EvtAfficherDetailPartie.class);
 	}
 
 	@Override
@@ -47,7 +47,7 @@ public class FrontalEchec implements FrontendFx{
 		registrar.registerStylesheet("/prod.css");
 		registrar.registerDefaultResources("/chaines_fr.properties");
 		registrar.registerResources(NtroApp.locale("en"),"/chaines_en.properties");
-		registrar.registerView(VuePartie.class, "/partie.xml");
+		registrar.registerView(VueDetailPartie.class, "/detailPartie.xml");
 		
 	}
 

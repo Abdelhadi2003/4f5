@@ -7,7 +7,7 @@ import java.util.ResourceBundle;
 import ca.ntro.app.NtroApp;
 import ca.ntro.app.views.ViewFx;
 import ca.ntro.core.initialization.Ntro;
-import echec.frontal.evenements.EvtAfficherPartie;
+import echec.frontal.evenements.EvtAfficherDetailPartie;
 import javafx.fxml.FXML;
 
 public class VueFileAttente extends ViewFx {
@@ -23,9 +23,9 @@ public class VueFileAttente extends ViewFx {
 	}
 	
 	private void installerEvtAfficherPartie() {
-		EvtAfficherPartie evtNtro = NtroApp.newEvent(EvtAfficherPartie.class);
+		EvtAfficherDetailPartie evtNtro = NtroApp.newEvent(EvtAfficherDetailPartie.class);
 		boutonOuvrirDetailPartie.setOnAction(evtFx -> {
-			System.out.println("[VueFileAttente] clic:" + evtFx.getEventType());
+			System.out.println("[VueDetailPartie] clic:" + evtFx.getEventType());
 			evtNtro.trigger();
 		});
 	}

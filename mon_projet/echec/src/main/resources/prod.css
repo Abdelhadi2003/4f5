@@ -3,11 +3,11 @@
 }
 
 #vue-racine {
-	-fx-background-color:grey;
+	-fx-background-color:tan;
 }
 
 #vue-file-attente {
-	-fx-alignment:bottom-right;
+	-fx-alignment:center;
 }
 
 #vue-partie {

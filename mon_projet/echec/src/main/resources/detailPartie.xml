@@ -4,7 +4,7 @@
 <?import javafx.scene.control.Button?>
 
 <VBox xmlns:fx="http://javafx.com/fxml"
-	fx:controller="echec.frontal.vues.VuePartie"
+	fx:controller="echec.frontal.vues.VueDetailPartie"
 	styleClass="conteneur"
 	id="vue-partie">
 

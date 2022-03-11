@@ -10,7 +10,7 @@ import ca.ntro.core.initialization.Ntro;
 import echec.frontal.evenements.EvtAfficherFileAttente;
 import javafx.fxml.FXML;
 
-public class VuePartie extends ViewFx{
+public class VueDetailPartie extends ViewFx{
 
 	@FXML
 	private Button boutonQuitterDetailPartie;
