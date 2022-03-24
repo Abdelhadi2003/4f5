@@ -8,6 +8,11 @@ public class DetailPartie implements Value{
 		
 	}
 	
+	public DetailPartie(String idJoueur, String nomPiecePerdu) {
+		setIdJoueur(idJoueur);
+		setPiecePerdu(nomPiecePerdu);
+	}
+
 	private String idJoueur;
 	private String piecePerdu;
 	public String getIdJoueur() {
@@ -23,7 +28,10 @@ public class DetailPartie implements Value{
 		this.piecePerdu = piecePerdu;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return piecePerdu;
+	}
 	
 
 }

@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ca.ntro.app.models.Model;
+import echec.frontal.vues.VueFileAttente;
+import echec.messages.MsgAjouterPiecePerdu;
 import echec.modeles.valeurs.DetailPartie;
 
 public class ModeleDetailJeu implements Model {
@@ -11,17 +13,48 @@ public class ModeleDetailJeu implements Model {
 	public ModeleDetailJeu() {
 		
 	}
-	
-	private List<DetailPartie> DetailPartie = new ArrayList<>();
+	private long prochainIdJoueur = 1;
+	private List<DetailPartie> DetailPartieOrdre = new ArrayList<>();
 
 	public List<DetailPartie> getDetailPartie() {
-		return DetailPartie;
+		return DetailPartieOrdre;
 	}
 
 	public void setDetailPartie(List<DetailPartie> detailPartie) {
-		DetailPartie = detailPartie;
+		DetailPartieOrdre = detailPartie;
 	}
 	
+	public void ajouterPiecePerduPour(String nomPiecePerdu) {
+		String idJoueur = genererIdJoueur();
+		DetailPartie detailPartie = new DetailPartie(idJoueur, nomPiecePerdu);
+		DetailPartieOrdre.add(detailPartie);
+	}
+
+	private String genererIdJoueur() {
+		// TODO Auto-generated method stub
+		String idJoueur = String.valueOf(prochainIdJoueur);
+		prochainIdJoueur++;
+		return idJoueur;
+	}
+	
+	public void afficherSur(VueFileAttente vueFileAttente) {
+		vueFileAttente.afficherMessage(this.toString());
+	}
+	
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		int numeroJoueur = 1;
+		for(DetailPartie detailPartie : DetailPartieOrdre) {
+			builder.append(numeroJoueur);
+			builder.append(". ");
+			builder.append(detailPartie.toString());
+			builder.append("\n");
+			
+			numeroJoueur++;
+		}
+		return builder.toString();
+	}
 	
 
 }

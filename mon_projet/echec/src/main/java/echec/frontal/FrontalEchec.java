@@ -6,6 +6,7 @@ import ca.ntro.app.frontend.events.EventRegistrar;
 import ca.ntro.app.tasks.frontend.FrontendTasks;
 import echec.frontal.evenements.EvtAfficherFileAttente;
 import echec.frontal.evenements.EvtAfficherDetailPartie;
+import echec.frontal.taches.AfficherFileAttente;
 import echec.frontal.taches.Navigation;
 import echec.frontal.taches.initialisation;
 import echec.frontal.vues.VueFileAttente;
@@ -23,6 +24,7 @@ public class FrontalEchec implements FrontendFx{
 		// TODO Auto-generated method stub
 		initialisation.creerTaches(tasks);
 		Navigation.creerTaches(tasks);
+		AfficherFileAttente.creerTaches(tasks);
 	}
 
 	@Override

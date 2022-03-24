@@ -13,11 +13,7 @@
 	<Label id="text"
 	text="%detailPartie">
 	</Label>
-    <ImageView>
-         <image>
-             <Image url="@echec.jpg"/>
-         </image>
-    </ImageView>
+    
 
     <Button 
 		fx:id="boutonOuvrirDetailPartie"
@@ -25,5 +21,19 @@
     	styleClass="gros-bouton"
 		id="bouton-ouvrir-detailPartie">
 	</Button>
+
+	<Button
+		fx:id="boutonAjouterPiecePerdu"
+		text="%ajouterPiecePerdu"
+		styleClass="gros-bouton"
+		id="boutonAjouterPiecePerdu">
+	</Button>
+
+	<Label
+		fx:id="labelMessage"
+		styleClass="texte"
+		id="label-message"
+		text="[labelMessage]">
+	</Label>
 	
 </VBox>
