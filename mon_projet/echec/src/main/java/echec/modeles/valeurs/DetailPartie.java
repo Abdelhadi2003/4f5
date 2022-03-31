@@ -1,6 +1,8 @@
 package echec.modeles.valeurs;
 
+import ca.ntro.app.frontend.ViewLoader;
 import ca.ntro.app.models.Value;
+import echec.frontal.vues.fragments.FragmentPiecePerdu;
 
 public class DetailPartie implements Value{
 	
@@ -31,6 +33,16 @@ public class DetailPartie implements Value{
 	@Override
 	public String toString() {
 		return piecePerdu;
+	}
+
+	public void afficherSur(FragmentPiecePerdu fragmentPiecePerdu) {
+		// TODO Auto-generated method stub
+		fragmentPiecePerdu.afficherPiecePerdu(piecePerdu);
+	}
+
+	public FragmentPiecePerdu creerFragment(ViewLoader<FragmentPiecePerdu> viewLoaderPiecePerdu) {
+		// TODO Auto-generated method stub
+		return viewLoaderPiecePerdu.createView();
 	}
 	
 

@@ -3,8 +3,10 @@ package echec.modeles;
 import java.util.ArrayList;
 import java.util.List;
 
+import ca.ntro.app.frontend.ViewLoader;
 import ca.ntro.app.models.Model;
 import echec.frontal.vues.VueFileAttente;
+import echec.frontal.vues.fragments.FragmentPiecePerdu;
 import echec.messages.MsgAjouterPiecePerdu;
 import echec.modeles.valeurs.DetailPartie;
 
@@ -37,8 +39,14 @@ public class ModeleDetailJeu implements Model {
 		return idJoueur;
 	}
 	
-	public void afficherSur(VueFileAttente vueFileAttente) {
-		vueFileAttente.afficherMessage(this.toString());
+	public void afficherSur(VueFileAttente vueFileAttente,
+			ViewLoader<FragmentPiecePerdu> viewLoaderPiecePerdu) {
+			vueFileAttente.viderListePiecePerdu();
+			for(DetailPartie detailPartie : DetailPartieOrdre) {
+				FragmentPiecePerdu fragmentPiecePerdu = detailPartie.creerFragment(viewLoaderPiecePerdu);
+				detailPartie.afficherSur(fragmentPiecePerdu);
+				vueFileAttente.ajouterPiecePerdu(fragmentPiecePerdu);
+			}
 	}
 	
 	@Override

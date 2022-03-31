@@ -5,6 +5,9 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ScrollPane?>
 
 <VBox xmlns:fx="http://javafx.com/fxml"
     fx:controller="echec.frontal.vues.VueFileAttente"
@@ -13,27 +16,27 @@
 	<Label id="text"
 	text="%detailPartie">
 	</Label>
-    
+	<Pane styleClass="petit-espace-vertical"/>
 
-    <Button 
-		fx:id="boutonOuvrirDetailPartie"
-		text="%retournerMenu"
-    	styleClass="gros-bouton"
-		id="bouton-ouvrir-detailPartie">
-	</Button>
-
-	<Button
+  	<Button
 		fx:id="boutonAjouterPiecePerdu"
 		text="%ajouterPiecePerdu"
 		styleClass="gros-bouton"
 		id="boutonAjouterPiecePerdu">
 	</Button>
 
-	<Label
-		fx:id="labelMessage"
-		styleClass="texte"
-		id="label-message"
-		text="[labelMessage]">
-	</Label>
-	
+    <Pane VBox.vgrow="ALWAYS" styleClass="grand-espace-vertical"/>
+
+    <HBox styleClass="conteneur">
+		 
+         <Pane HBox.hgrow="ALWAYS" styleClass="grand-espace-horizontal"/>
+    <ScrollPane HBox.hgrow="ALWAYS" fitToWidth="true">
+		<content>
+		 <VBox HBox.hgrow="ALWAYS" styleClass="conteneur" fx:id="conteneurPiecePerdu" id="conteneur-piece-perdu">
+         </VBox>
+		</content>
+    </ScrollPane>
+		 <Pane HBox.hgrow="ALWAYS" styleClass="grand-espace-horizontal"/>
+	</HBox>
+    <Pane VBox.vgrow="ALWAYS" styleClass="grand-espace-vertical"/>
 </VBox>

@@ -12,6 +12,7 @@ import echec.frontal.taches.initialisation;
 import echec.frontal.vues.VueFileAttente;
 import echec.frontal.vues.VueDetailPartie;
 import echec.frontal.vues.VueRacine;
+import echec.frontal.vues.fragments.FragmentPiecePerdu;
 import ca.ntro.app.services.Window;
 import static ca.ntro.app.tasks.frontend.FrontendTasks.*;
 
@@ -50,7 +51,7 @@ public class FrontalEchec implements FrontendFx{
 		registrar.registerDefaultResources("/chaines_fr.properties");
 		registrar.registerResources(NtroApp.locale("en"),"/chaines_en.properties");
 		registrar.registerView(VueDetailPartie.class, "/detailPartie.xml");
-		
+		registrar.registerView(FragmentPiecePerdu.class, "/fragments/piece_perdu.xml");
 	}
 
 }
