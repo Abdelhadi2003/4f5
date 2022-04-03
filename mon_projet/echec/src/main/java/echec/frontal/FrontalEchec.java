@@ -7,11 +7,13 @@ import ca.ntro.app.tasks.frontend.FrontendTasks;
 import echec.frontal.evenements.EvtAfficherFileAttente;
 import echec.frontal.evenements.EvtAfficherDetailPartie;
 import echec.frontal.taches.AfficherFileAttente;
+import echec.frontal.taches.AfficherPartie;
 import echec.frontal.taches.Navigation;
 import echec.frontal.taches.initialisation;
 import echec.frontal.vues.VueFileAttente;
 import echec.frontal.vues.VueDetailPartie;
 import echec.frontal.vues.VueRacine;
+import echec.frontal.vues.donnees.DonneesVuePartie;
 import echec.frontal.vues.fragments.FragmentPiecePerdu;
 import ca.ntro.app.services.Window;
 import static ca.ntro.app.tasks.frontend.FrontendTasks.*;
@@ -26,6 +28,7 @@ public class FrontalEchec implements FrontendFx{
 		initialisation.creerTaches(tasks);
 		Navigation.creerTaches(tasks);
 		AfficherFileAttente.creerTaches(tasks);
+		AfficherPartie.creerTaches(tasks);
 	}
 
 	@Override
@@ -52,6 +55,7 @@ public class FrontalEchec implements FrontendFx{
 		registrar.registerResources(NtroApp.locale("en"),"/chaines_en.properties");
 		registrar.registerView(VueDetailPartie.class, "/detailPartie.xml");
 		registrar.registerView(FragmentPiecePerdu.class, "/fragments/piece_perdu.xml");
+		registrar.registerViewData(DonneesVuePartie.class);
 	}
 
 }

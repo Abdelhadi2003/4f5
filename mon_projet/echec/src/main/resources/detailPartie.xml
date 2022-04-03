@@ -1,18 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.Button?>
+<?import echec.frontal.vues.controles.CanvasPartie?>
 
 <VBox xmlns:fx="http://javafx.com/fxml"
 	fx:controller="echec.frontal.vues.VueDetailPartie"
 	styleClass="conteneur"
 	id="vue-partie">
 
+	<Pane styleClass="petit-espace-vertical"/>
+
+	<HBox VBox.vgrow="ALWAYS" styleClass="conteneur">
+		
+		<Pane styleClass="petit-espace-horizontal"/>
+		
+		<CanvasPartie
+			HBox.hgrow="ALWAYS"
+			fx:id="canvasPartie"
+			id="canvas-partie">
+		</CanvasPartie>
+		
+		<Pane styleClass="petit-espace-horizontal"/>
+	
+	</HBox>
+	
+	<Pane styleClass="petit-espace-vertical"/>
+	
 	<Button
 		fx:id="boutonQuitterDetailPartie"
 		text="%quitterPartie"
 		styleClass="gros-bouton"
 		id="boutonQuitterDetailPartie">
 	</Button>
+
+	<Pane styleClass="petit-espace-vertical"/>
 
 </VBox>
