@@ -3,6 +3,8 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.control.Button?>
 <?import echec.frontal.vues.controles.CanvasPartie?>
 
@@ -10,7 +12,9 @@
 	fx:controller="echec.frontal.vues.VueDetailPartie"
 	styleClass="conteneur"
 	id="vue-partie">
-
+	<Label id="text"
+	text="%jeu">
+	</Label>
 	<Pane styleClass="petit-espace-vertical"/>
 
 	<HBox VBox.vgrow="ALWAYS" styleClass="conteneur">

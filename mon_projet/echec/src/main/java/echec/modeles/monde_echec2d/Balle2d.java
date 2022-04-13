@@ -2,20 +2,21 @@ package echec.modeles.monde_echec2d;
 
 import ca.ntro.core.initialization.Ntro;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.ArcType;
 
 public class Balle2d extends Objet2d{
 
 	private static final double EPSILON = 1;
-	
+	private Image image = new Image("/piece.jpg");
 	@Override
 	public void initialize() {
 		// TODO Auto-generated method stub
 		setTopLeftX(100);
 		setTopLeftY(100);
-		setWidth(10);
-		setHeight(10);
+		setWidth(100);
+		setHeight(100);
 		setSpeedX(100 + Ntro.random().nextInt(100));
 		setSpeedY(100 + Ntro.random().nextInt(100));
 		
@@ -30,7 +31,7 @@ public class Balle2d extends Objet2d{
 	@Override
 	public void draw(GraphicsContext gc) {
 		// TODO Auto-generated method stub
-		gc.fillArc(getTopLeftX(), getTopLeftY(), getWidth(), getHeight(), 0, 360, ArcType.CHORD);
+		gc.drawImage(image, getTopLeftX(), getTopLeftY(), getWidth(), getHeight());
 	}
 
 	@Override

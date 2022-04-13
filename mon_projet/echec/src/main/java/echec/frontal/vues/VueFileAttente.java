@@ -12,6 +12,7 @@ import java.util.ResourceBundle;
 import ca.ntro.app.NtroApp;
 import ca.ntro.app.views.ViewFx;
 import ca.ntro.core.initialization.Ntro;
+import echec.Session;
 import echec.frontal.evenements.EvtAfficherDetailPartie;
 import echec.frontal.vues.fragments.FragmentPiecePerdu;
 import echec.messages.MsgAjouterPiecePerdu;
@@ -55,7 +56,7 @@ public class VueFileAttente extends ViewFx {
 	private void installerMsgAjouterPiecePerdu() {
 		MsgAjouterPiecePerdu msgAjouterPiecePerdu = NtroApp.newMessage(MsgAjouterPiecePerdu.class);
 		boutonAjouterPiecePerdu.setOnAction(evtFx -> {
-		msgAjouterPiecePerdu.setNomPiecePerdu(nomPiecePerdu());
+		msgAjouterPiecePerdu.setNomPiecePerdu(Session.piecePerdu);
 		msgAjouterPiecePerdu.send();
 		});
 	}

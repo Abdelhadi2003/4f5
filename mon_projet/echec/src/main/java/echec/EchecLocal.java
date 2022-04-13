@@ -10,26 +10,19 @@ import echec.dorsal.DorsalEchecDistant;
 import echec.frontal.FrontalEchec;
 import echec.messages.MsgAjouterPiecePerdu;
 import echec.modeles.ModeleDetailJeu;
-import echec.modeles.enums.Cadran;
 import echec.modeles.valeurs.DetailPartie;
 
-public class ClientEchec implements NtroClientFx{
+public class EchecLocal implements NtroClientFx{
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		if(args.length > 0) {
-			Session.piecePerdu = args[0];
-		}
-		if(args.length > 1) {
-			Session.cadran = Cadran.valueOf(args[1]);
-		}
 		NtroClientFx.launch(args);
 	}
 
 	@Override
 	public void registerBackend(BackendRegistrar registrar) {
 		// TODO Auto-generated method stub
-		registrar.registerBackend(new DorsalEchecDistant());
+		registrar.registerBackend(new DorsalEchec());
 	}
 
 	@Override
