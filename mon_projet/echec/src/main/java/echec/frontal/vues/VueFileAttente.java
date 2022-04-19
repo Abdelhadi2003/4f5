@@ -60,7 +60,6 @@ public class VueFileAttente extends ViewFx {
 		msgAjouterPiecePerdu.send();
 		});
 	}
-	
 	private String nomPiecePerdu() {
 		List<String> PiecePerduJoueur = List.of("roi",
 												"reine",
