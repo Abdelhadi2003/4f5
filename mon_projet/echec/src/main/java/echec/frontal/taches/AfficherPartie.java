@@ -14,7 +14,7 @@ public class AfficherPartie {
 		tasks.taskGroup("AfficherPartie")
 			.waitsFor(created(DonneesVuePartie.class))
 			.andContains(subTasks -> {
-				prochaineImagePartie(subTasks);
+				// prochaineImagePartie(subTasks);
 			});
 			
 	}
@@ -27,16 +27,16 @@ public class AfficherPartie {
 			});
 	}
 	
-	private static void prochaineImagePartie(FrontendTasks subTasks) {
-		subTasks.task("prochaineImagePartie")
-			.waitsFor(clock().nextTick())
-			.thenExecutes(inputs -> {
-				Tick tick = inputs.get(clock().nextTick());
-				DonneesVuePartie donneesVuePartie = inputs.get(created(DonneesVuePartie.class));
-				VueDetailPartie vuePartie = inputs.get(created(VueDetailPartie.class));
-				donneesVuePartie.reagirTempsQuiPasse(tick.elapsedTime());
-				donneesVuePartie.afficherSur(vuePartie);
-			});
-	}
+//	private static void prochaineImagePartie(FrontendTasks subTasks) {
+//		subTasks.task("prochaineImagePartie")
+//			.waitsFor(clock().nextTick())
+//			.thenExecutes(inputs -> {
+//				
+//				DonneesVuePartie donneesVuePartie = inputs.get(created(DonneesVuePartie.class));
+//				VueDetailPartie vuePartie = inputs.get(created(VueDetailPartie.class));
+//			
+//				donneesVuePartie.afficherSur(vuePartie);
+//			});
+//	}
 
 }

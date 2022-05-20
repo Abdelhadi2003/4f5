@@ -8,35 +8,117 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
 
-<VBox xmlns:fx="http://javafx.com/fxml"
-    fx:controller="echec.frontal.vues.VueFileAttente"
-	styleClass="conteneur"
-	id="vue-file-attente">
-	<Label id="text"
-	text="%detailPartie">
-	</Label>
-	<Pane styleClass="petit-espace-vertical"/>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="echec.frontal.vues.VueFileAttente" styleClass="conteneur" id="vue-file-attente">
+	<Label id="detailPartie" text="%detailPartie"></Label>
+	<Pane styleClass="petit-espace-vertical" />
+	<Pane styleClass="petit-espace-vertical" />
+	<HBox id="orientation">
+		<Pane HBox.hgrow="ALWAYS" styleClass="grand-espace-horizontal" />
+		<Label id="modeDeJeu" text="%modeDeJeu"></Label>
+		<Pane styleClass="petit-espace-horizontal" />
+		<Pane styleClass="petit-espace-horizontal" />
+		 <fx:define>
+        <ToggleGroup fx:id="myToggleGroup"/>
+    	</fx:define>
+		<RadioButton fx:id="matchAmical" text="%matchAmical" toggleGroup="$myToggleGroup"></RadioButton>
+		<RadioButton fx:id="tournois" text="%tournois" toggleGroup="$myToggleGroup"></RadioButton>
 
-  	<Button
-		fx:id="boutonAjouterPiecePerdu"
-		text="%ajouterPiecePerdu"
-		styleClass="gros-bouton"
-		id="boutonAjouterPiecePerdu">
-	</Button>
-
-    <Pane VBox.vgrow="ALWAYS" styleClass="grand-espace-vertical"/>
-
-    <HBox styleClass="conteneur">
-		 
-         <Pane HBox.hgrow="ALWAYS" styleClass="grand-espace-horizontal"/>
-    <ScrollPane HBox.hgrow="ALWAYS" fitToWidth="true">
-		<content>
-		 <VBox HBox.hgrow="ALWAYS" styleClass="conteneur" fx:id="conteneurPiecePerdu" id="conteneur-piece-perdu">
-         </VBox>
-		</content>
-    </ScrollPane>
-		 <Pane HBox.hgrow="ALWAYS" styleClass="grand-espace-horizontal"/>
+		<Pane HBox.hgrow="ALWAYS" styleClass="grand-espace-horizontal" />
+		<Pane HBox.hgrow="ALWAYS" styleClass="grand-espace-horizontal" />
+		<Pane styleClass="petit-espace-horizontal" />
+		<Pane HBox.hgrow="ALWAYS" styleClass="grand-espace-horizontal" />
 	</HBox>
-    <Pane VBox.vgrow="ALWAYS" styleClass="grand-espace-vertical"/>
+
+	<Pane styleClass="petit-espace-vertical" />
+	<Pane styleClass="petit-espace-vertical" />
+
+	<HBox id="orientation">
+		<Pane HBox.hgrow="ALWAYS" styleClass="grand-espace-horizontal" />
+		<Label id="Joueur1" text="%Joueur1"></Label>
+		<Pane styleClass="petit-espace-horizontal" />
+		<ComboBox fx:id="nomJoueurCombobox" layoutX="15.0" layoutY="33.0" prefWidth="100.0" promptText="choose">
+			<items>
+				<FXCollections fx:factory="observableArrayList">
+					<String fx:value="Abdelhadi" />
+					<String fx:value="Amine" />
+				</FXCollections>
+			</items>
+		</ComboBox>
+		<Pane HBox.hgrow="ALWAYS" styleClass="grand-espace-horizontal" />
+		<Label id="Joueur2" text="%Joueur2"></Label>
+		<Pane styleClass="petit-espace-horizontal" />
+		<ComboBox fx:id="nomJoueurCombobox2" layoutX="15.0" layoutY="33.0" prefWidth="100.0" promptText="choose">
+			<items>
+				<FXCollections fx:factory="observableArrayList">
+					<String fx:value="Abdelhadi" />
+					<String fx:value="Amine" />
+				</FXCollections>
+			</items>
+		</ComboBox>
+		<Pane HBox.hgrow="ALWAYS" styleClass="grand-espace-horizontal" />
+	</HBox>
+
+	<HBox id="orientation">
+		<Pane HBox.hgrow="ALWAYS" styleClass="grand-espace-horizontal" />
+		<Label id="CouleurPieceJoueur1" text="%CouleurPieceJoueur1"></Label>
+		<Pane styleClass="petit-espace-horizontal" />
+		<ComboBox fx:id="couleurPieceCombobox1" layoutX="15.0" layoutY="33.0" prefWidth="100.0" promptText="choose">
+			<items>
+				<FXCollections fx:factory="observableArrayList">
+					<String fx:value="Noir" />
+					<String fx:value="Blanc" />
+				</FXCollections>
+			</items>
+		</ComboBox>
+		<Pane HBox.hgrow="ALWAYS" styleClass="grand-espace-horizontal" />
+		<Label id="CouleurPieceJoueur2" text="%CouleurPieceJoueur2"></Label>
+		<Pane styleClass="petit-espace-horizontal" />
+		<ComboBox fx:id="couleurPieceCombobox2" layoutX="15.0" layoutY="33.0" prefWidth="100.0" promptText="choose">
+			<items>
+				<FXCollections fx:factory="observableArrayList">
+					<String fx:value="Noir" />
+					<String fx:value="Blanc" />
+				</FXCollections>
+			</items>
+		</ComboBox>
+		<Pane HBox.hgrow="ALWAYS" styleClass="grand-espace-horizontal" />
+	</HBox>
+
+	<HBox id="orientation">
+		<Pane HBox.hgrow="ALWAYS" styleClass="grand-espace-horizontal" />
+		<Label id="chronoJoueur1" text="%chronoJoueur1"></Label>
+		<Label id="chronometre1" fx:id="chronometre1" text="text"></Label>
+		<Pane HBox.hgrow="ALWAYS" styleClass="grand-espace-horizontal" />
+		<Label id="chronoJoueur2" text="%chronoJoueur2"></Label>
+		<Pane styleClass="petit-espace-horizontal" />
+		<Label id="chronometre2" fx:id="chronometre2" text="text2"></Label>
+		<Pane HBox.hgrow="ALWAYS" styleClass="grand-espace-horizontal" />
+	</HBox>
+	<HBox id="orientation">
+		<Pane HBox.hgrow="ALWAYS" styleClass="grand-espace-horizontal" />
+		<Label id="PiecePerdu" text="%PiecePerdu"></Label>
+		<Pane HBox.hgrow="ALWAYS" styleClass="grand-espace-horizontal" />
+		<Pane HBox.hgrow="ALWAYS" styleClass="grand-espace-horizontal" />
+		<Pane styleClass="petit-espace-horizontal" />
+		<Label id="PiecePerdu" text="%PiecePerdu"></Label>
+		<Pane HBox.hgrow="ALWAYS" styleClass="grand-espace-horizontal" />
+	</HBox>
+
+	<HBox id="orientation">
+		<Pane HBox.hgrow="ALWAYS" styleClass="grand-espace-horizontal" />
+		<Label id="piecePerduHasard" fx:id="piecePerduHasard"></Label>
+		<Pane HBox.hgrow="ALWAYS" styleClass="grand-espace-horizontal" />
+		<Pane HBox.hgrow="ALWAYS" styleClass="grand-espace-horizontal" />
+		<Pane styleClass="petit-espace-horizontal" />
+		<Label id="piecePerduHasard2" fx:id="piecePerduHasard2"></Label>
+		<Pane HBox.hgrow="ALWAYS" styleClass="grand-espace-horizontal" />
+	</HBox>
+	<Pane VBox.vgrow="ALWAYS" styleClass="grand-espace-vertical" />
+
+	<Button fx:id="boutonOuvrirPartie" text="%ouvrirPartie" styleClass="gros-bouton" id="bouton-ouvrir-partie"></Button>
+	
+	<Pane styleClass="petit-espace-vertical" />
 </VBox>

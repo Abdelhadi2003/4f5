@@ -8,7 +8,6 @@ import ca.ntro.app.models.ModelRegistrar;
 import echec.dorsal.DorsalEchec;
 import echec.dorsal.DorsalEchecDistant;
 import echec.frontal.FrontalEchec;
-import echec.messages.MsgAjouterPiecePerdu;
 import echec.modeles.ModeleDetailJeu;
 import echec.modeles.enums.Cadran;
 import echec.modeles.valeurs.DetailPartie;

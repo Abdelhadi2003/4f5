@@ -11,9 +11,83 @@
 	-fx-alignment:center;
 }
 
-#vue-partie {
-	-fx-alignment:center;
+#text {
+	-fx-font-size: 20px;
+	-fx-font-weight: bold;
+	-fx-alignement:top-center;
 }
+
+#vue-partie {
+	-fx-alignement:center;
+}
+
+#orientation {
+	-fx-alignement:center;
+}
+
+#detailPartie {
+	-fx-font-size: 20px;
+	-fx-font-weight: bold;
+	-fx-alignment:top-center;
+	-fx-text-fill: #800080;
+}
+
+#modeDeJeu {
+	-fx-font-weight: bold;
+	-fx-font-size: 12px;
+	-fx-underline: true;
+	-fx-text-fill: #660000;
+}
+#Joueur1 {
+	-fx-font-weight: bold;
+	-fx-font-size: 12px;
+	-fx-underline: true;
+	-fx-text-fill: #660000;
+}
+
+#Joueur2 {
+	-fx-font-weight: bold;
+	-fx-font-size: 12px;
+	-fx-underline: true;
+	-fx-text-fill: #660000;
+}
+#CouleurPieceJoueur1 {
+	-fx-font-weight: bold;
+	-fx-font-size: 12px;
+	-fx-underline: true;
+	-fx-text-fill: #660000;
+}
+#CouleurPieceJoueur2 {
+	-fx-font-weight: bold;
+	-fx-underline: true;
+	-fx-text-fill: #660000;
+}
+#chronoJoueur1 {
+	-fx-font-weight: bold;
+	-fx-font-size: 12px;
+	-fx-underline: true;
+	-fx-text-fill: #660000;
+}
+#chronoJoueur2 {
+	-fx-font-weight: bold;
+	-fx-font-size: 12px;
+	-fx-underline: true;
+	-fx-text-fill: #660000;
+}
+#PiecePerdu {
+	-fx-font-weight: bold;
+	-fx-font-size: 12px;
+	-fx-underline: true;
+	-fx-text-fill: #660000;
+}
+#piecePerduHasard {
+	-fx-font-style: italic;
+}
+#piecePerduHasard2 {
+	-fx-font-style: italic;
+}
+
+
 
 .gros-bouton {
 	-fx-font-size: 1.2em;
@@ -26,6 +100,7 @@
     -fx-padding: 3 30 3 30;
     -fx-text-fill: black;
     -fx-font-size: 14px;
+	-fx-alignement: center;
 }
 
 .gros-bouton:pressed {
@@ -36,10 +111,6 @@
 	-fx-cursor: hand;
 }
 
-#text {
-	-fx-font-size: 1.5em;
-	-fx-alignment:top-center;
-}
 
 .petit-espace-vertical {
     -fx-min-height:10;
